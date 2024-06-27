@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+                    "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
+                }
+            }
+        </script>
+    
+    </head>
+    <body>
+        <div id="container" class="canvasContainer">
+        </div>
+        <div class="MenuContainer">
+            <h2> KeyPads</h2>
+            <p>translate Y(Arrow-Up,Arrow-Down)</p>
+            <p>translate X(Arrow-Left,Arrow-Right)</p>
+            <p>translate Z(W,S)</p>
+            <p>Rotate Z(Q,E)</p>
+            <p>Rotate Y(A,D)</p>
+            <p>Rotate X(Z,X)</p>
+            <p>Reset Camera : R </p>
+            <div id="Light">
+                <h2><strong>Light</strong></h2>
+                <label for="range" class="form-label">Ambient Light</label>
+                <input class="form-check-input" type="checkbox" value="" id="checkbox" checked>
+                
+                <div style="display:flex;flex-direction: row;">
+                    <input type="range" class="form-range" id="range" style="max-width: 150px;">
+                    <p ><strong id="number"> 0.50</strong>  intensity</p>
+                </div>
+
+                <label for="range" class="form-label">Directinol Light</label>
+                <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                
+                <div style="display:flex;flex-direction: row;">
+                    <input type="range" class="form-range" id="range2" style="max-width: 150px;">
+                    <p ><strong id="number2"> 0.50</strong>  intensity</p>
+                </div>
+                <div style="display:flex;flex-direction: row;">
+                    <input type="range" class="form-range" id="rangeX" style="max-width: 150px;">
+                    <p ><strong id="numberX"> 0</strong>  X</p>
+                </div>
+                <div style="display:flex;flex-direction: row;">
+                    <input type="range" class="form-range" id="rangeY" style="max-width: 150px;">
+                    <p ><strong id="numberY"> 10</strong>  Y</p>
+                </div>
+                <div style="display:flex;flex-direction: row;">
+                    <input type="range" class="form-range" id="rangeZ" style="max-width: 150px;">
+                    <p ><strong id="numberZ"> 0</strong>  Z</p>
+                </div>
+                
+            </div>
+
+        </div>
+       
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="app.js"></script>
+    <script src="../build/stats.min.js"></script>
+</html>
